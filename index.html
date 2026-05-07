@@ -3,125 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuroPulse | Precision Neural Analytics</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;700;900&family=Manrope:wght@200;500;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #f8fafc;
-            --accent: #0ea5e9;
-        }
-        body {
-            background-color: var(--bg);
-            color: #1e293b;
-            font-family: 'Outfit', sans-serif;
-            overflow-x: hidden;
-        }
-        .text-gradient {
-            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);
-        }
-        .neural-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
-            position: absolute;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(2); opacity: 0; }
-            100% { transform: scale(1); opacity: 0; }
-        }
-    </style>
+    <title>NeuroPulse | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="fixed w-full z-50 px-10 py-6 flex justify-between items-center backdrop-blur-md border-b border-white/20">
-        <div class="text-xl font-black tracking-widest uppercase flex items-center gap-2">
-            <span class="w-6 h-6 bg-sky-500 rounded-full"></span>
-            NeuroPulse
-        </div>
-        <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest text-slate-400">
-            <a href="#" class="hover:text-sky-600 transition-colors">Diagnostics</a>
-            <a href="#" class="hover:text-sky-600 transition-colors">Integration</a>
-            <a href="#" class="hover:text-sky-600 transition-colors">Research</a>
-        </div>
-        <button class="px-8 py-3 bg-slate-900 text-white rounded-full text-[10px] uppercase font-black tracking-widest shadow-xl shadow-sky-500/10 hover:bg-sky-600 transition-all">Request Demo</button>
+    <nav class="navbar">
+        <div class="nav-brand"><div class="nav-dot"></div> NeuroPulse</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="diagnostics.html">Diagnostics</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <a href="pricing.html" class="btn-nav">Request Demo</a>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-            <div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-sky-100 rounded-full blur-[120px] -z-10"></div>
-            <div class="absolute top-1/2 right-0 w-[500px] h-[500px] bg-indigo-50 rounded-full blur-[100px] -z-10"></div>
-            
-            <div class="container mx-auto px-10">
-                <div class="max-w-4xl">
-                    <div class="inline-block px-4 py-1 bg-sky-100 text-sky-700 text-[10px] font-black uppercase tracking-widest rounded-full mb-8">Next-Gen Neurotech</div>
-                    <h1 class="text-6xl md:text-9xl font-black leading-[0.9] mb-10 tracking-tight text-slate-900">
-                        Understanding the <br/>
-                        <span class="text-gradient">Human Operating System.</span>
-                    </h1>
-                    <p class="text-xl md:text-2xl text-slate-500 mb-14 leading-relaxed max-w-2xl font-light">
-                        NeuroPulse uses non-invasive spatial imaging to monitor neural activity in real-time. Predict patterns, optimize performance, and understand the mind.
-                    </p>
-                    <div class="flex flex-wrap gap-6">
-                        <button class="px-10 py-5 bg-sky-600 text-white font-bold rounded-2xl shadow-2xl shadow-sky-600/30 hover:bg-sky-700 transition-all">Explore the Platform</button>
-                        <button class="px-10 py-5 glass-panel text-slate-900 font-bold rounded-2xl hover:bg-white transition-all">Watch the Vision</button>
-                    </div>
+    <section class="hero">
+        <div class="hero-blob"></div>
+        <div class="hero-content">
+            <div class="badge">Next-Gen Neurotech</div>
+            <h1>Understanding the <span class="accent">Human Operating System.</span></h1>
+            <p>NeuroPulse uses non-invasive spatial imaging to monitor neural activity in real-time. Predict patterns, optimize performance, and understand the mind.</p>
+            <div class="hero-buttons">
+                <a href="dashboard.html" class="btn-primary">View Dashboard</a>
+                <a href="diagnostics.html" class="btn-secondary">Diagnostics</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="glass-panel">
+                <div class="stats-row" style="margin-top:0; gap:1rem;">
+                    <div class="stat-box"><div class="value">89%</div><div class="label">Neural Sync</div></div>
+                    <div class="stat-box"><div class="value">12ms</div><div class="label">Latency</div></div>
+                </div>
+                <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.8rem;">
+                    <div style="background:#f1f5f9;border-radius:8px;height:10px;overflow:hidden;"><div style="height:100%;width:78%;background:var(--primary);border-radius:8px;"></div></div>
+                    <div style="background:#f1f5f9;border-radius:8px;height:10px;overflow:hidden;"><div style="height:100%;width:55%;background:#6366f1;border-radius:8px;"></div></div>
+                    <div style="background:#f1f5f9;border-radius:8px;height:10px;overflow:hidden;"><div style="height:100%;width:90%;background:#10b981;border-radius:8px;"></div></div>
                 </div>
             </div>
-            
-            <div class="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block w-1/3">
-                <div class="glass-panel p-10 rounded-[3rem] rotate-[-5deg] border-l-[20px] border-white">
-                    <div class="space-y-6">
-                        <div class="h-4 bg-slate-100 rounded-full w-full overflow-hidden">
-                            <div class="h-full bg-sky-500 w-3/4"></div>
-                        </div>
-                        <div class="h-4 bg-slate-100 rounded-full w-2/3 overflow-hidden">
-                            <div class="h-full bg-indigo-400 w-1/2"></div>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4 pt-4">
-                            <div class="h-20 bg-slate-50 rounded-2xl flex items-center justify-center font-black text-2xl text-slate-300">89%</div>
-                            <div class="h-20 bg-slate-50 rounded-2xl flex items-center justify-center font-black text-2xl text-slate-300">12ms</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Stats Section -->
-        <section class="py-32 container mx-auto px-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-                <div class="space-y-4">
-                    <div class="text-xs font-black uppercase tracking-widest text-sky-500">Precision</div>
-                    <h3 class="text-4xl font-bold">Sub-Micron Accuracy</h3>
-                    <p class="text-slate-500 leading-relaxed">Detecting neural signals at a level previously only possible with invasive implants.</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="text-xs font-black uppercase tracking-widest text-indigo-500">Velocity</div>
-                    <h3 class="text-4xl font-bold">Latency-Free Sync</h3>
-                    <p class="text-slate-500 leading-relaxed">Processing 10TB of neural data per second via our proprietary edge clusters.</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="text-xs font-black uppercase tracking-widest text-emerald-500">Security</div>
-                    <h3 class="text-4xl font-bold">Biometric Encryption</h3>
-                    <p class="text-slate-500 leading-relaxed">Your neural data is yours alone, secured by quantum-grade biometric keys.</p>
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for <span class="accent">Precision</span></h2>
+                <p>Three pillars that make NeuroPulse the most advanced neural monitoring platform available.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card"><div class="card-icon">🔬</div><h3>Sub-Micron Accuracy</h3><p>Detecting neural signals at a level previously only possible with invasive implants.</p></div>
+                <div class="card"><div class="card-icon">⚡</div><h3>Latency-Free Sync</h3><p>Processing 10TB of neural data per second via our proprietary edge clusters.</p></div>
+                <div class="card"><div class="card-icon">🔒</div><h3>Biometric Encryption</h3><p>Your neural data is yours alone, secured by quantum-grade biometric keys.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand"><div class="nav-dot"></div> NeuroPulse</div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a><a href="dashboard.html">Dashboard</a>
+                    <a href="diagnostics.html">Diagnostics</a><a href="pricing.html">Pricing</a>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="py-20 bg-white text-center border-t border-slate-100">
-        <p class="text-slate-400 font-bold uppercase tracking-widest text-[10px]">NeuroPulse Diagnostics © 2026 | Pakistan Research Center</p>
+            <div class="footer-bottom"><p>Built with ❤️ by <strong>Kiran Yasmeen</strong> · © 2026 NeuroPulse</p></div>
+        </div>
     </footer>
+    <script>function toggleMenu() { document.querySelector('.nav-links').classList.toggle('open'); }</script>
 </body>
 </html>
