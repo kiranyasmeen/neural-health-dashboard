@@ -1,7 +1,7 @@
 ﻿# 🧠 NeuroPulse — Neural Health Dashboard
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_Site-0EA5E9?style=for-the-badge)](https://neural-health-dashboard.netlify.app/)
-[![GitHub](https://img.shields.io/badge/Source_Code-GitHub-black?style=for-the-badge&logo=github)](https://github.com/majidali/neural-health-dashboard)
+[![GitHub](https://img.shields.io/badge/Source_Code-GitHub-black?style=for-the-badge&logo=github)](https://github.com/kiranyasmeen/neural-health-dashboard)
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:6366f1&height=150&section=header&text=NeuroPulse&fontSize=50&animation=fadeIn" width="100%" />
@@ -30,7 +30,7 @@ Real-time neural health monitoring system with precision data visualization and 
 ## 🚀 Getting Started
 `ash
 # Clone the repository
-git clone https://github.com/majidali/neural-health-dashboard.git
+git clone https://github.com/kiranyasmeen/neural-health-dashboard.git
 
 # Open in browser
 open index.html
@@ -38,7 +38,7 @@ open index.html
 
 ---
 
-<p align="center">Built with ❤️ by <strong>Majid Ali</strong></p>
+<p align="center">Built with ❤️ by <strong>Kiran Yasmeen</strong></p>
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:6366f1&height=80&section=footer" width="100%" />
 </p>
